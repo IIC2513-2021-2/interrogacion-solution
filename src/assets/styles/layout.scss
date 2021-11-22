@@ -75,7 +75,7 @@ header {
           border: none;
           background: none;
 
-          &:hover {
+          &:hover, &.selected {
             background-color: $app-light-gray;
             color: white;
           }

@@ -11,6 +11,7 @@ router.use(async (ctx, next) => {
     candidates: ctx.router.url('candidates'),
     theory: ctx.router.url('theory'),
   };
+  ctx.state.path = ctx.path;
 
   await next();
 });
