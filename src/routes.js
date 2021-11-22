@@ -1,11 +1,21 @@
 const KoaRouter = require('koa-router');
 
-const hello = require('./routes/hello');
+const candidates = require('./routes/candidates');
 const index = require('./routes/index');
 
 const router = new KoaRouter();
 
+router.use(async (ctx, next) => {
+  ctx.state.paths = {
+    index: ctx.router.url('index'),
+    candidates: ctx.router.url('candidates'),
+    theory: ctx.router.url('theory'),
+  };
+
+  await next();
+});
+
 router.use('/', index.routes());
-router.use('/hello', hello.routes());
+router.use('/candidates', candidates.routes());
 
 module.exports = router;
