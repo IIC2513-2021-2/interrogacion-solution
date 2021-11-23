@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('candidates', {
@@ -6,20 +5,20 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
       party: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       birthdate: {
-        type: Sequelize.DATEONLY
+        type: Sequelize.DATEONLY,
       },
       photo: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       description: {
         type: Sequelize.TEXT,
@@ -32,15 +31,15 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
-  down: async (queryInterface, Sequelize) => {
+  down: async (queryInterface) => {
     await queryInterface.dropTable('candidates');
-  }
+  },
 };

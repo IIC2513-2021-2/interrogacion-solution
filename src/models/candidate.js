@@ -1,7 +1,7 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class candidate extends Model {
     /**
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.hasMany(models.proposal);
     }
-  };
+  }
   candidate.init({
     name: {
       type: DataTypes.STRING,
