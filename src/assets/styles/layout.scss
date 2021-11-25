@@ -86,6 +86,11 @@ header {
   }
 }
 
+.question {
+  border-bottom: 1px solid #CCC;
+  padding: 10px 0;
+}
+
 .candidates-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
