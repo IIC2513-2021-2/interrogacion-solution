@@ -1,6 +1,7 @@
-const {
-  Model,
-} = require('sequelize');
+const bcrypt = require('bcrypt');
+const { Model } = require('sequelize');
+
+const PASSWORD_SALT_ROUNDS = 10;
 
 module.exports = (sequelize, DataTypes) => {
   class user extends Model {
@@ -11,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate() {
       // define association here
+    }
+
+    async checkPassword(password) {
+      return bcrypt.compare(password, this.password);
     }
   }
   user.init({
@@ -32,5 +37,13 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'user',
   });
+
+  user.beforeSave(async (instance) => {
+    if (instance.changed('password')) {
+      const hash = await bcrypt.hash(instance.password, PASSWORD_SALT_ROUNDS);
+      instance.set('password', hash);
+    }
+  });
+
   return user;
 };
