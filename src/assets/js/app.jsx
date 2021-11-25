@@ -1,9 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import Candidates from './candidates';
 
-const reactAppContainer = document.getElementById('react-app');
+const rootElem = document.getElementById('root');
 
-if (reactAppContainer) {
-  ReactDOM.render(<App />, reactAppContainer);
+if (rootElem) {
+  const candidates = new Candidates();
+  candidates.render(rootElem);
 }
