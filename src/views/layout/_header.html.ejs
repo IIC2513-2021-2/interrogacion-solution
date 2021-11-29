@@ -13,5 +13,18 @@
         </li>
       </ul>
     </nav>
+    <form action="<%= paths.selectLanding %>" method="post" class='form-options'>
+      <% Object.keys(options.landing).forEach((landingOption) => { %>
+        <input
+          type="radio"
+          id="<%= landingOption %>-landing"
+          class="option-input"
+          name="selectedLanding"
+          value="<%= landingOption %>"
+          <%= selectedOptions.landing === landingOption ? 'checked' : '' %>
+        />
+        <label for="<%= landingOption %>-landing"><%= options.landing[landingOption].title %></label>
+      <% }) %>
+    </form>
   </div>
 </header>

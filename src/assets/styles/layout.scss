@@ -91,6 +91,12 @@ header {
   padding: 10px 0;
 }
 
+.form-options {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
 .candidates-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

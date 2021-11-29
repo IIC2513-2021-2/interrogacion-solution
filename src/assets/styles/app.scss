@@ -1,0 +1,96 @@
+// Wireframe 1
+
+.first-initial-box {
+  display: flex;
+  border: 1px solid $main-color;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    span:last-child {
+      order: -1;
+    }
+  }
+
+  img {
+    width: 60%;
+    height: auto;
+  }
+}
+
+.first-secondary-box {
+  padding: 50px 0;
+
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.paragraph {
+  a {
+    color: $app-blue; // Or other color to differentiate
+    font-weight: bold; // Only to highlight (not required)
+  }
+}
+
+// Wireframe 2
+
+.second-initial-box {
+  position: relative;
+
+  h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.second-secondary-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 50px;
+
+  .second-content {
+    padding: 20% 10%;
+    border: 1px solid $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+}
+
+.second-footer {
+  padding: 0 50px;
+}
+
+// Common
+
+footer {
+  text-align: right;
+}

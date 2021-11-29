@@ -2,6 +2,7 @@ const KoaRouter = require('koa-router');
 
 const candidates = require('./routes/candidates');
 const index = require('./routes/index');
+const { options, selectedOptions } = require('./utils');
 
 const router = new KoaRouter();
 
@@ -10,8 +11,11 @@ router.use(async (ctx, next) => {
     index: ctx.router.url('index'),
     candidates: ctx.router.url('candidates'),
     theory: ctx.router.url('theory'),
+    selectLanding: ctx.router.url('select-landing'),
   };
   ctx.state.path = ctx.path;
+  ctx.state.options = options;
+  ctx.state.selectedOptions = selectedOptions;
 
   await next();
 });
