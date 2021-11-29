@@ -4,28 +4,28 @@
   <h3>Pregunta 1</h3>
   <p>¿Cuál es la diferencia entre los métodos HTTP <code>PUT</code> y <code>PATCH</code>?</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>El método HTTP <code>PUT</code> se utiliza para actualizar un recurso por completo, mientras que el método HTTP <code>PATCH</code> se utiliza para actualizar un recurso de forma parcial. Otra diferencia es que si se hace un request con método <code>PUT</code> y el recurso no existe, este se crea, a diferencia de <code>PATCH</code> que debería retornar 404.</p>
 </div>
 
 <div class="question">
   <h3>Pregunta 2</h3>
   <p>Explique qué significa el status code 422 del protocolo HTTP.</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>El status code <code>422</code> tiene por nombre "Unprocessable Entity", y se refiere a un error de cliente en que, a pesar de que el request tiene la sintaxis correcta, el servidor no es capaz de procesarlo debido a un problema con la entidad asociada (comúnmente validación).</p>
 </div>
 
 <div class="question">
   <h3>Pregunta 3</h3>
   <p>Un documento HTML escrito con etiquetas semánticas (header, article, section, etc) es correcto a diferencia de uno que no incluye este tipo de etiquetas. Comente esta afirmación presentando argumentos.</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>La afirmación no es correcta, debido a que un documento HTML escrito <strong>sin</strong> etiquetas semánticas perfectamente puede estar correcto en cuanto a sintaxis. Lo que las etiquetas semánticas proveen es mayor información respecto al propósito de cada sección del documento, lo que puede ser muy útil para mejorar accesibilidad y también para motores de búsqueda. Sin embargo, el documento es funcional si no se incluyen.</p>
 </div>
 
 <div class="question">
   <h3>Pregunta 4</h3>
   <p>En relación a CSS, mencione 2 diferencias entre las técnicas de disposición de elementos Flexbox y Grid.</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>Flexbox permite disponer elementos en un solo eje (horizontal o vertical) mientras que Grid permite hacerlo en dos ejes (especificando filas y columnas). Por otro lado, si bien ambos permiten armar grillas, con Grid se tiene más flexibilidad que con Flexbox debido a que fue diseñado para eso, y esto finalmente implica menos código.</p>
 </div>
 
 <div class="question">
@@ -50,40 +50,40 @@
   </code>
   <p>¿Por qué vemos que se imprime una dirección de <code>person1</code> algo diferente a lo definido originalmente?</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>Porque la key <code>address</code> tanto de <code>person1</code> como de <code>person2</code> está apuntando o referenciando al mismo objeto JavaScript. Por lo tanto, al modificar la propiedad <code>city</code> del objeto accediéndolo a través de <code>person2.address</code>, se está modificando el mismo objeto que es referenciado por <code>person1.address</code>.</p>
 </div>
 
 <div class="question">
   <h3>Pregunta 6</h3>
   <p>Considerando que ambas funcionalidades de JavaScript nos permiten ejecutar código asíncrono, ¿cuál es la diferencia entre callbacks y promesas?</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>Los callbacks son funciones que le pasamos a alguna funcionalidad asíncrona, para que se ejecuten usualmente una vez que esta termine, mientras que las promesas son objetos JavaScript que representan un valor que se obtendrá en el futuro producto de una operación asíncrona. Además, las promesas permiten encadenar una serie de respuestas a operaciones asíncronas, permitiendo manejarlas de forma más limpia.</p>
 </div>
 
 <div class="question">
   <h3>Pregunta 7</h3>
   <p>¿A qué nos referimos cuando decimos que Node.js permite realizar operaciones I/O no-bloqueantes?</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>Todas las operaciones I/O en Node.js son asíncronas, lo que significa que el proceso no se quedará esperando a que una operación de este tipo termine antes de continuar su ejecución, por lo tanto, no bloquea otras operaciones (como recibir nuevos requests HTTP). Esto es posible gracias al event loop, que permite ejecutar código asíncrono en un solo thread.</p>
 </div>
 
 <div class="question">
   <h3>Pregunta 8</h3>
   <p>¿Por qué una herramienta como ESLint puede ser útil para un proyecto de software hecho en JavaScript? Mencione al menos 2 razones.</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>Por un lado porque permite estandarizar el estilo del código, facilitando que distintos desarrolladores puedan colaborar en un mismo proyecto. Por otro lado, puede ayudar a identificar código eventualmente duplicado y también problemas de sintaxis.</p>
 </div>
 
 <div class="question">
   <h3>Pregunta 9</h3>
   <p>En relación a la arquitectura REST definida por Roy Fielding, ¿a qué se refiere el principio de "mensajes auto-descriptivos" dentro del principio general de "interfaz uniforme"?</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>Se refiere a que cada mensaje que se intercambia entre cliente y servidor incluye la información suficiente para ser procesado por el receptor. En la práctica esto se puede ver en que incluye el formato o "media type" del mensaje (HTML, JSON, XML, etc). Puede incluir también información sobre cómo ser "cacheado".</p>
 </div>
 
 <div class="question">
   <h3>Pregunta 10</h3>
   <p>¿Cuál es la importancia del componente "signature" dentro del formato de un JSON Web Token (JWT)?</p>
   <h4>Respuesta:</h4>
-  <p></p>
+  <p>El signature de un JWT es fundamental por 2 razones: para asegurar que el mensaje del payload no ha sido modificado por terceros, y para verificar que el JWT fue efectivamente generado por la entidad que se espera que lo haya hecho.</p>
 </div>
