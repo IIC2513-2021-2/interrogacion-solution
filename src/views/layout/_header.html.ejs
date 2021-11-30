@@ -26,5 +26,18 @@
         <label for="<%= landingOption %>-landing"><%= options.landing[landingOption].title %></label>
       <% }) %>
     </form>
+    <form action="<%= paths.selectProposals %>" method="post" class='form-options'>
+      <% Object.keys(options.proposals).forEach((proposalOption) => { %>
+        <input
+          type="radio"
+          id="<%= proposalOption %>-proposal"
+          class="option-input"
+          name="selectedProposals"
+          value="<%= proposalOption %>"
+          <%= selectedOptions.proposals === proposalOption ? 'checked' : '' %>
+        />
+        <label for="<%= proposalOption %>-proposal"><%= options.proposals[proposalOption].title %></label>
+      <% }) %>
+    </form>
   </div>
 </header>

@@ -14,6 +14,12 @@ router.post('select-landing', 'select-landing', (ctx) => {
   ctx.redirect(ctx.router.url('index'));
 });
 
+router.post('select-proposals', 'select-proposals', (ctx) => {
+  const { selectedProposals } = ctx.request.body;
+  selectedOptions.proposals = selectedProposals;
+  ctx.redirect(ctx.router.url('index'));
+});
+
 router.get('theory', 'preguntas-teoricas', async (ctx) => {
   await ctx.render('static/preguntas-teoricas');
 });

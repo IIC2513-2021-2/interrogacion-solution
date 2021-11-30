@@ -12,6 +12,7 @@ router.use(async (ctx, next) => {
     candidates: ctx.router.url('candidates'),
     theory: ctx.router.url('theory'),
     selectLanding: ctx.router.url('select-landing'),
+    selectProposals: ctx.router.url('select-proposals'),
   };
   ctx.state.path = ctx.path;
   ctx.state.options = options;
